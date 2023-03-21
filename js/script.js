@@ -28,7 +28,6 @@ const bottonePrecedente=document.querySelector(".precedente");
 const bottoneSuccessivo=document.querySelector(".successiva");
 
 
-
 // TIMEOUT CHE SCORRE L'IMMAGINI IN AUTOMATICO
 let intervalloImmagini = setInterval(immagineSuccessiva, 3000);
 
@@ -48,7 +47,7 @@ bottoneSuccessivo.addEventListener("click", function(){
     intervalloImmagini = setInterval(immagineSuccessiva, 3000);
 });
 
- //Bottone precedente premuto
+ //Bottone Precedente premuto
  bottonePrecedente.addEventListener("click", function(){
     immaginePrecedente();
  });
