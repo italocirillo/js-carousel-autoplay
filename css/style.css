@@ -36,6 +36,7 @@ img{
 }
 .contenitore-immagine-grande{
     width: 80%;
+    cursor: pointer;
 }
 .contenitore-immagine-grande img{
     min-height: 100%;
