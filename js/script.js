@@ -28,6 +28,22 @@ const bottonePrecedente=document.querySelector(".precedente");
 const bottoneSuccessivo=document.querySelector(".successiva");
 // Bottone Successivo premuto
 bottoneSuccessivo.addEventListener("click", function(){
+    immagineSuccessiva();
+});
+
+ //Bottone precedente premuto
+ bottonePrecedente.addEventListener("click", function(){
+    immaginePrecedente();
+ });
+
+// TIMEOUT CHE SCORRE L'IMMAGINI IN AUTOMATICO
+setInterval(immagineSuccessiva, 3000);
+
+ /*******************************************************/
+//  FUNZIONI
+/********************************************************/
+// Va all'immagine successiva
+function immagineSuccessiva(){
     arrayImmaginiGrandi[indiceAttuale].classList.remove("active");
     arrayImmagini[indiceAttuale].classList.remove("elemento-immagine-lato-attivo");
     // Controllo bottoni
@@ -38,10 +54,10 @@ bottoneSuccessivo.addEventListener("click", function(){
     }
     arrayImmaginiGrandi[indiceAttuale].classList.add("active");
     arrayImmagini[indiceAttuale].classList.add("elemento-immagine-lato-attivo");
-});
+}
 
- //Bottone precedente premuto
- bottonePrecedente.addEventListener("click", function(){
+// Va all'immagine precedente
+function immaginePrecedente(){
     arrayImmaginiGrandi[indiceAttuale].classList.remove("active");
     arrayImmagini[indiceAttuale].classList.remove("elemento-immagine-lato-attivo");
     // Controllo bottoni
@@ -52,5 +68,4 @@ bottoneSuccessivo.addEventListener("click", function(){
     }
     arrayImmaginiGrandi[indiceAttuale].classList.add("active");
     arrayImmagini[indiceAttuale].classList.add("elemento-immagine-lato-attivo");
- });
-
+}
