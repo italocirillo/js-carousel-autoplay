@@ -36,6 +36,9 @@ let intervalloImmagini = setInterval(immagineSuccessiva, 3000);
 contenitoreImmagineGrande.addEventListener("mouseover",function(){
     clearInterval(intervalloImmagini);
 });
+contenitoreImmagineGrande.addEventListener("mouseout",function(){
+    intervalloImmagini = setInterval(immagineSuccessiva, 3000);
+});
 
 // Bottone Successivo premuto
 bottoneSuccessivo.addEventListener("click", function(){
