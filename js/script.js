@@ -26,18 +26,22 @@ arrayImmagini[indiceAttuale].classList.add("elemento-immagine-lato-attivo");
 // Gestione bottoni
 const bottonePrecedente=document.querySelector(".precedente");
 const bottoneSuccessivo=document.querySelector(".successiva");
+
+// TIMEOUT CHE SCORRE L'IMMAGINI IN AUTOMATICO
+let intervalloImmagini = setInterval(immagineSuccessiva, 3000);
+
 // Bottone Successivo premuto
 bottoneSuccessivo.addEventListener("click", function(){
     immagineSuccessiva();
+    // RESETTO L'INTERVALLO
+    clearInterval(intervalloImmagini);
+    intervalloImmagini = setInterval(immagineSuccessiva, 3000);
 });
 
  //Bottone precedente premuto
  bottonePrecedente.addEventListener("click", function(){
     immaginePrecedente();
  });
-
-// TIMEOUT CHE SCORRE L'IMMAGINI IN AUTOMATICO
-setInterval(immagineSuccessiva, 3000);
 
  /*******************************************************/
 //  FUNZIONI
